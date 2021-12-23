@@ -57,3 +57,23 @@ this.express.use(passport.initialize());
 
 Para criar o usuário é simples, basta criar um registro no banco de dados criptografando a senha.
 Já para autenticar, é preciso verificar se a senha do usuário está correta (`bcryptjs`) e caso esteja, criar um token JWT para que as requisições possam ser feitas.
+
+# Rotas:
+
+POST /users/auth - Autenticar usuário
+Body:
+```
+{
+  "username": "string",
+  "password": "string"
+}
+```
+
+POST /users - Criar usuário
+```
+{
+  "username": "string",
+  "password": "string"
+}
+```
+
